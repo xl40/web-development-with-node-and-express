@@ -4,6 +4,16 @@ var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
+app.get('/', function(req, res){
+    res.type('text/plain');
+    res.send('Meadowlark Travel');
+});
+app.get('/about', function(req, res){
+    res.type('text/plain');
+    res.send('About Meadowlark Travel');
+});
+
+
 // 定制404页面
 app.use(function (req, res) {
     res.type('text/plain');
